@@ -67,7 +67,7 @@ h1 {
 
 .chatbox {
 	border: 1px solid #eee;
-	margin: 0 0 40 0;
+	margin-bottom: 40px;
 }
 
 .chattextbox {
@@ -78,4 +78,8 @@ h1 {
 .chatbutton {
 	background-color: tomato;
 	border-radius: 5px;
+	border: 1px solid transparent;
+	padding: 5px 8px;
+	line-height: 1.25;
+	color: white;
 }
