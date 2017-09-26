@@ -64,3 +64,7 @@ h1 {
 #game .grid.ended .slot:not(.highlight) {
 	opacity: 0.5;
 }
+
+.chatbox {
+	border: 1px solid #eee;
+}
