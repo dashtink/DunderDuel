@@ -4,10 +4,10 @@ body {
 }
 
 body {
-	font-family: 'Alef', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 h1 {
-	font-family: 'Gloria Hallelujah', sans-serif;
+	font-family: 'Work Sans', sans-serif;
 }
 
 #menu {
@@ -67,4 +67,9 @@ h1 {
 
 .chatbox {
 	border: 1px solid #eee;
+}
+
+.chattextbox {
+	border: 1px solid #eee;
+	background-color: tomato;
 }
