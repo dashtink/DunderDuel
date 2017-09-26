@@ -67,9 +67,15 @@ h1 {
 
 .chatbox {
 	border: 1px solid #eee;
+	margin: 0 0 40 0;
 }
 
 .chattextbox {
 	border: 1px solid #eee;
+	background-color: lightgrey;
+}
+
+.chatbutton {
 	background-color: tomato;
+	border-radius: 5px;
 }
