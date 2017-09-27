@@ -245,7 +245,11 @@
 				condole.log('Send chat message');
     }
 
-
+	var chatMessage = document.getElementById('addChatMessage').value;
+	$('a[href="#chat"]').on('click', function() {
+	#addChatMessage.appendChild(chatMessage);
+	console.log('Chatting happened');
+}
 
 
 	$('a[href="#start"]').on('click', function(event) {
