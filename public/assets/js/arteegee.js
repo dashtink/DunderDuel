@@ -27,7 +27,9 @@
 		conn.on('data', function(data) {
 			switch(data[0]) {
                 case 'chat':
-                    $('#game .alert p').text('Got Chat Message: ' + data[1])
+                    console.log('got chat data')
+					$('#game .alert p').text('Got Chat Message: ' + data[1])
+					console.log(data[1])
                     break
                 case 'move':
 					if(turn) {
