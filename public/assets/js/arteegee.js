@@ -239,26 +239,27 @@
 
 // CHAT
 
-
+/*
 var chatMessageText = document.getElementById('chatMessage').value;
 var chatBtn = document.getElementById('chatButton');
 
-chatBtn.addEventListener('click', function() {
+chatBtn.addEventListener('click', () => {
 
   var chatBoxDiv = document.getElementById('addChatMessage');
   var pChat = document.createElement('p');
     pChat.textContent = chatMessageText;
-    chatBoxDiv.appendChild('pChat');
+    chatBocDiv.appendChild('pChat');
 
 console.log('Chatting happened');
 });
+*/
 
 
 	  function chat(messageContentIn) {
         initialize()
         conn.send('chat', messageContentIn);
-        $('#game .alert p').text("Sent Chat Message");
-				condole.log('Send chat message');
+        $('#game .alert p').text(messageContentIn);
+				condole.log(messageContentIn);
     }
 
 
@@ -272,8 +273,10 @@ console.log('Chatting happened');
 	})
     $('a[href="#chat"]').on('click', function (event) {
         event.preventDefault()
-        var messageContent = prompt("What do you want to send?")
-        chat(messageContent)
+        //var messageContent = prompt("What do you want to send?")
+				var messageContent = document.getElementById('chatMessage').value;
+        chat('messageContent')
+				console.log('Clicked the button!');
     })
 
 
