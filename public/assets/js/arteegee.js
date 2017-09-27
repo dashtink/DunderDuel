@@ -236,11 +236,16 @@
 		})
     }
 
+
+// CHAT
     function chat(messageContentIn) {
         initialize()
         conn.send('chat', messageContentIn);
-        $('#game .alert p').text("Sent Chat Message")
+        $('#game .alert p').text("Sent Chat Message");
+				condole.log('Send chat message');
     }
+
+
 
 
 	$('a[href="#start"]').on('click', function(event) {
