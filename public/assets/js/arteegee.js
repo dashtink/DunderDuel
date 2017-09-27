@@ -274,7 +274,7 @@ console.log('Chatting happened');
         event.preventDefault()
 				var messageContent = document.getElementById('chatMessage').value;
 				$('#game .alert p').text(messageContent);
-				conn.send('chat', messageContent);
+				conn.send(['chat', messageContent]);
 				console.log('Sent a chat!');
     })
 
