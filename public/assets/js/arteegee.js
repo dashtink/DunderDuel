@@ -255,29 +255,32 @@ console.log('Chatting happened');
 */
 
 
-	  function chat(messageContentIn) {
-        initialize()
-        conn.send('chat', messageContentIn);
-        $('#game .alert p').text(messageContentIn);
-				condole.log(messageContentIn);
-    }
 
 
 	$('a[href="#start"]').on('click', function(event) {
 		event.preventDefault()
 		start()
 	})
+
 	$('a[href="#join"]').on('click', function(event) {
 		event.preventDefault()
 		join()
 	})
+
     $('a[href="#chat"]').on('click', function (event) {
         event.preventDefault()
         //var messageContent = prompt("What do you want to send?")
 				var messageContent = document.getElementById('chatMessage').value;
-        chat('messageContent')
+        chat('messageContent');
 				console.log('Clicked the button!');
     })
+
+		function chat(messageContentIn) {
+				initialize()
+				conn.send('chat', messageContentIn);
+				$('#game .alert p').text(messageContentIn);
+				console.log(messageContentIn);
+		}
 
 
 	$('#game .grid td').on('mouseenter', function() {
