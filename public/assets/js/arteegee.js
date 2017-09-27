@@ -238,6 +238,8 @@
 
 
 // CHAT
+
+
 var chatMessageText = document.getElementById('chatMessage').value;
 var chatBtn = document.getElementById('chatButton');
 
@@ -246,11 +248,10 @@ chatBtn.addEventListener('click', () => {
   var chatBoxDiv = document.getElementById('addChatMessage');
   var pChat = document.createElement('p');
     pChat.textContent = chatMessageText;
-    chatBocDiv.appendChild('pChat');
+    chatBoxDiv.appendChild('pChat');
 
 console.log('Chatting happened');
 });
-
 
 
 	  function chat(messageContentIn) {
