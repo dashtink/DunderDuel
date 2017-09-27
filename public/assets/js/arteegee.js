@@ -271,11 +271,9 @@ console.log('Chatting happened');
 
     $('a[href="#chat"]').on('click', function (event) {
         event.preventDefault()
-        //var messageContent = prompt("What do you want to send?")
 				var messageContent = document.getElementById('chatMessage').value;
 				$('#game .alert p').text(messageContent);
-      //  chat('messageContent');
-				console.log('Clicked the button!');
+				console.log('Sent a chat!');
     })
 
 /*
