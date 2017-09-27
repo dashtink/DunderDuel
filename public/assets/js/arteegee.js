@@ -268,11 +268,11 @@ console.log('Chatting happened');
 	})
 
 
-
     $('a[href="#chat"]').on('click', function (event) {
         event.preventDefault()
 				var messageContent = document.getElementById('chatMessage').value;
 				$('#game .alert p').text(messageContent);
+				conn.send('chat', messageContent);
 				console.log('Sent a chat!');
     })
 
@@ -280,7 +280,6 @@ console.log('Chatting happened');
 		function chat(messageContentIn) {
 				initialize()
 				conn.send('chat', messageContentIn);
-
 				console.log(messageContentIn);
 		}
 */
