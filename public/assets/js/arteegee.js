@@ -267,10 +267,11 @@ console.log('Chatting happened');
 		join()
 	})
 
+	var messageContent = document.getElementById('chatMessage').value;
+
     $('a[href="#chat"]').on('click', function (event) {
         event.preventDefault()
         //var messageContent = prompt("What do you want to send?")
-				var messageContent = document.getElementById('chatMessage').value;
         chat('messageContent');
 				console.log('Clicked the button!');
     })
