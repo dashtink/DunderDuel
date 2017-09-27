@@ -238,19 +238,28 @@
 
 
 // CHAT
-    function chat(messageContentIn) {
+var chatMessageText = document.getElementById('chatMessage').value;
+var chatButton = document.getElementById('chatButton');
+
+chatButton.addEventListener('click', () => {
+
+  var chatBoxDiv = document.getElementById('addChatMessage');
+  var pChat = document.createElement('p');
+    pChat.textContent = chatMessageText;
+    chatBocDiv.appendChild('pChat');
+
+console.log('Chatting happened');
+});
+
+
+
+	  function chat(messageContentIn) {
         initialize()
         conn.send('chat', messageContentIn);
         $('#game .alert p').text("Sent Chat Message");
 				condole.log('Send chat message');
     }
-/*
-	var chatMessage = document.getElementById('addChatMessage').value;
-	$('a[href="#chat"]').on('click', function() {
-	#addChatMessage.appendChild(chatMessage);
-	console.log('Chatting happened');
-}
-*/
+
 
 	$('a[href="#start"]').on('click', function(event) {
 		event.preventDefault()
