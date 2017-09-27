@@ -243,7 +243,7 @@
 var chatMessageText = document.getElementById('chatMessage').value;
 var chatBtn = document.getElementById('chatButton');
 
-chatBtn.addEventListener('click', () => {
+chatBtn.addEventListener('click', function() {
 
   var chatBoxDiv = document.getElementById('addChatMessage');
   var pChat = document.createElement('p');
