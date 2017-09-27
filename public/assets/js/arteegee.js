@@ -273,7 +273,7 @@ console.log('Chatting happened');
         event.preventDefault()
         //var messageContent = prompt("What do you want to send?")
 				var messageContent = document.getElementById('chatMessage').value;
-				$('#game .alert p').text('messageContent');
+				$('#game .alert p').text(messageContent);
       //  chat('messageContent');
 				console.log('Clicked the button!');
     })
