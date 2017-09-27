@@ -267,22 +267,25 @@ console.log('Chatting happened');
 		join()
 	})
 
-	var messageContent = document.getElementById('chatMessage').value;
+
 
     $('a[href="#chat"]').on('click', function (event) {
         event.preventDefault()
         //var messageContent = prompt("What do you want to send?")
-        chat('messageContent');
+				var messageContent = document.getElementById('chatMessage').value;
+				$('#game .alert p').text('messageContent');
+      //  chat('messageContent');
 				console.log('Clicked the button!');
     })
 
+/*
 		function chat(messageContentIn) {
 				initialize()
 				conn.send('chat', messageContentIn);
-				$('#game .alert p').text(messageContentIn);
+
 				console.log(messageContentIn);
 		}
-
+*/
 
 	$('#game .grid td').on('mouseenter', function() {
 		$('#game .grid tr td:nth-child('+($(this).index()+1)+')').addClass('hover')
