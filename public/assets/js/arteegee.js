@@ -239,9 +239,9 @@
 
 // CHAT
 var chatMessageText = document.getElementById('chatMessage').value;
-var chatButton = document.getElementById('chatButton');
+var chatBtn = document.getElementById('chatButton');
 
-chatButton.addEventListener('click', () => {
+chatBtn.addEventListener('click', () => {
 
   var chatBoxDiv = document.getElementById('addChatMessage');
   var pChat = document.createElement('p');
