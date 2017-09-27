@@ -26,7 +26,10 @@
 	function begin() {
 		conn.on('data', function(data) {
 			switch(data[0]) {
-				case 'move':
+                case 'chat':
+                    $('#game .alert p').text('Got Chat Message: ' + data[1])
+                    break
+                case 'move':
 					if(turn) {
 						return
 					}
@@ -231,7 +234,14 @@
 				begin()
 			})
 		})
-	}
+    }
+
+    function chat(messageContentIn) {
+        initialize()
+        conn.send('chat', messageContentIn);
+        $('#game .alert p').text("Sent Chat Message")
+    }
+
 
 	$('a[href="#start"]').on('click', function(event) {
 		event.preventDefault()
@@ -241,6 +251,12 @@
 		event.preventDefault()
 		join()
 	})
+    $('a[href="#chat"]').on('click', function (event) {
+        event.preventDefault()
+        var messageContent = prompt("What do you want to send?")
+        chat(messageContent)
+    })
+
 
 	$('#game .grid td').on('mouseenter', function() {
 		$('#game .grid tr td:nth-child('+($(this).index()+1)+')').addClass('hover')
