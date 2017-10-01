@@ -22,6 +22,9 @@
 		[],
 		[]
 	]
+	// 20171001 - current card and deck
+	var currentCard = null
+	var deck = {}
 
 	function begin() {
 		conn.on('data', function(data) {
@@ -178,6 +181,14 @@
 	})
 
 	function initialize() {
+		// 20171001 - Prepare Deck
+		console.log("Deck size" + deck.length)
+		console.log("Adding cards to deck")
+		for (i = 0; i < 20; i++) {
+		    deck[i] = new Card(1)
+		}
+		console.log("Deck size" + deck.length)
+
 		peer = new Peer('', {
 			host: location.hostname,
 			port: location.port || (location.protocol === 'https:' ? 443 : 80),
@@ -278,6 +289,14 @@ console.log('Chatting happened');
 				console.log('Sent a chat!');
     })
 
+		$('a[href="#deckStack"]').on('click', function (event) {
+				console.log('Entered #deckStack')
+				event.preventDefault()
+				console.log('popping card')
+				currentCard = deck.pop()
+				console.log('Current Card Name: ' + currentCard.getCardName)
+				console.log('New Deck Size: ' + deck.length)
+    })
 /*
 		function chat(messageContentIn) {
 				initialize()
