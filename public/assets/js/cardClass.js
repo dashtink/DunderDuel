@@ -42,19 +42,19 @@ Card.prototype.flipCard = function() {
 };
 
 Card.prototype.getCardText = function() {
-  return cardText;
+  return this.cardText;
 };
 Card.prototype.getCardName = function() {
-  return cardName;
+  return this.cardName;
 };
 Card.prototype.getCardType = function() {
-  return cardType;
+  return this.cardType;
 };
 Card.prototype.getUuid = function() {
-  return uuid;
+  return this.uuid;
 };
 Card.prototype.getCardNumber = function() {
-  return cardNumber;
+  return this.cardNumber;
 };
 
 Card.prototype.isAttack = function() {
