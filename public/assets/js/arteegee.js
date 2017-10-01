@@ -36,7 +36,7 @@
                     break
 								case 'drew':
 										console.log('oppenent drew card ' + data[1] + ' cards remain')
-										$('#game .alert p').text('Your move!')
+										$('#game .enemyCardsLeft').value(data[1])
 										if (data[1] <= 0) {
 											wonGame()
 										}
@@ -314,7 +314,7 @@ console.log('Chatting happened');
 				if(deck.length == 0) {
 					lostGame()
 				}
-				$('#game .cardsLeft').text(deck.length)
+				$('#game .myCardsLeft').value(deck.length)
 				console.log('Current Card Name: ' + currentCard.getCardName())
 				console.log('New Deck Size: ' + deck.length)
     })
