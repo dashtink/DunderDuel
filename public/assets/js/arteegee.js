@@ -31,9 +31,16 @@
 			switch(data[0]) {
                 case 'chat':
                     console.log('got chat data')
-					$('#game .alert p').text('Got Chat Message: ' + data[1])
-					console.log(data[1])
+										$('#game .alert p').text('Got Chat Message: ' + data[1])
+										console.log(data[1])
                     break
+								case 'drew':
+										console.log('oppenent drew card ' + data[1] + ' cards remain')
+										$('#game .alert p').text('Your move!')
+										if (data[1] <= 0) {
+											wonGame()
+										}
+										break
                 case 'move':
 					if(turn) {
 						return
@@ -249,6 +256,15 @@
 		})
     }
 
+		function lostGame() {
+			$('#game .grid').addClass('ended')
+			$('#game .alert p').text('You lost!')
+		}
+		function wonGame() {
+			$('#game .grid').addClass('ended')
+			$('#game .alert p').text('You won!')
+		}
+
 
 // CHAT
 
@@ -294,6 +310,11 @@ console.log('Chatting happened');
 				event.preventDefault()
 				console.log('popping card')
 				currentCard = deck.pop()
+				conn.send(['drew', deck.length]);
+				if(deck.length == 0) {
+					lostGame()
+				}
+				$('#game .cardsLeft').text(deck.length)
 				console.log('Current Card Name: ' + currentCard.getCardName())
 				console.log('New Deck Size: ' + deck.length)
     })

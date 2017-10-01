@@ -45,7 +45,10 @@ html(lang='en')
 					div.chattextbox
 						input#chatMessage(placeholder='...')
 					a.btn.btn-default.btn-lg(href='#chat') Send
-					a.btn.btn-default.btn-lg(href='#deckStack') MainDeck
+					div.decksArea
+						input#cardsLeft(text='0')
+						a.btn.btn-default.btn-lg(href='#deckStack') MainDeck
+						a.btn.btn-default.btn-lg(href='#') EnemyDeck
 
 
 		block scripts
