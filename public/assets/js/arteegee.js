@@ -36,7 +36,7 @@
                     break
 								case 'drew':
 										console.log('oppenent drew card ' + data[1] + ' cards remain')
-										$('#game .enemyCardsLeft').val(data[1])
+										$('#enemyCardsLeft').val(data[1])
 										if (data[1] <= 0) {
 											wonGame()
 										}
@@ -195,7 +195,7 @@
 		    deck[i] = new Card(i)
 		}
 		console.log("Deck size: " + deck.length)
-		$('#game .myCardsLeft').val(deck.length)
+		$('#myCardsLeft').val(deck.length)
 
 		peer = new Peer('', {
 			host: location.hostname,
@@ -315,7 +315,7 @@ console.log('Chatting happened');
 				if(deck.length == 0) {
 					lostGame()
 				}
-				$('#game .myCardsLeft').val(deck.length)
+				$('#myCardsLeft').val(deck.length)
 				console.log('Current Card Name: ' + currentCard.getCardName())
 				console.log('New Deck Size: ' + deck.length)
     })
