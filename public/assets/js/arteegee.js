@@ -24,8 +24,7 @@
 	]
 	// 20171001 - current card and deck
 	var currentCard = null
-	var deck = {}
-	//var Card = require('./cardClass.js') //this needs to be somewhere to define card
+	var deck = []
 
 	function begin() {
 		conn.on('data', function(data) {
@@ -183,12 +182,12 @@
 
 	function initialize() {
 		// 20171001 - Prepare Deck
-		console.log("Deck size" + deck.length)
+		console.log("Deck size: " + deck.length)
 		console.log("Adding cards to deck")
 		for (i = 0; i < 20; i++) {
 		    deck[i] = new Card(i)
 		}
-		console.log("Deck size" + deck.length)
+		console.log("Deck size: " + deck.length)
 
 		peer = new Peer('', {
 			host: location.hostname,
