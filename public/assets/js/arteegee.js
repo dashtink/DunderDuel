@@ -25,7 +25,7 @@
 	// 20171001 - current card and deck
 	var currentCard = null
 	var deck = {}
-	
+	//var Card = require('./cardClass.js') //this needs to be somewhere to define card
 
 	function begin() {
 		conn.on('data', function(data) {
