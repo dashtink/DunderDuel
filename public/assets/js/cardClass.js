@@ -1,7 +1,7 @@
 // need to get cards in database so they are jsut called by number
 //  and their constructors get the info from the database
 
-module.exports = function Card(n) {
+function Card(n) {
   this.cardNumber = n;
   this.uuid = '564161651664848';
   this.cardName = 'Card Name';
@@ -66,7 +66,7 @@ Card.prototype.isDefense = function() {
 Card.prototype.isNonCombat = function() {
   return this.cardType == 'Non-Combat'? true: false;
 };
-
+//module.exports = Card;
 
 // call new object instance with:
 //  var card = new Card(1);
