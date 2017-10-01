@@ -294,7 +294,7 @@ console.log('Chatting happened');
 				event.preventDefault()
 				console.log('popping card')
 				currentCard = deck.pop()
-				console.log('Current Card Name: ' + currentCard.getCardName)
+				console.log('Current Card Name: ' + currentCard.getCardName())
 				console.log('New Deck Size: ' + deck.length)
     })
 /*
