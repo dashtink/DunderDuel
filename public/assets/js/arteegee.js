@@ -25,6 +25,7 @@
 	// 20171001 - current card and deck
 	var currentCard = null
 	var deck = {}
+	const myModule = require('./cardClass.js');
 
 	function begin() {
 		conn.on('data', function(data) {
@@ -185,7 +186,7 @@
 		console.log("Deck size" + deck.length)
 		console.log("Adding cards to deck")
 		for (i = 0; i < 20; i++) {
-		    deck[i] = new Card(1)
+		    deck[i] = new Card(i)
 		}
 		console.log("Deck size" + deck.length)
 
